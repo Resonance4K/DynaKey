@@ -1,0 +1,12 @@
+
+# Directories
+
+build/
+nbproject/
+test/
+
+# Files
+
+build.xml
+dir.cmd
+manifest.mf
