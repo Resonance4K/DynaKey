@@ -1,7 +1,9 @@
 
 # Directories
 
+bin/
 build/
+dist/
 nbproject/
 test/
 
