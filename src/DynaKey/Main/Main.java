@@ -7,4 +7,9 @@ public final class Main
     {
         
     }
+    
+    public Main()
+    {
+        
+    }
 }

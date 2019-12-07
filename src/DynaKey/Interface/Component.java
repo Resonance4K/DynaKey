@@ -1,9 +1,9 @@
 
 package DynaKey.Interface;
 
-public final class Component
+public abstract class Component
 {
-    public Component()
+    protected Component()
     {
         
     }
