@@ -1,21 +1,35 @@
 
-package DynaKey.Interface;
+package DynaKey.Window;
 
-import DynaKey.Render.Renderer;
-
+import java.awt.Graphics;
 import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 import java.awt.event.MouseWheelEvent;
+import java.awt.event.MouseWheelListener;
+import javax.swing.JPanel;
 
-public final class CheckBox extends Component
+public final class Panel extends JPanel implements KeyListener, MouseListener, MouseMotionListener, MouseWheelListener
 {
-    public CheckBox()
+    public Panel()
+    {
+        
+    }
+    
+    private void initKeyboardInput()
+    {
+        
+    }
+    
+    private void initMouseInput()
     {
         
     }
     
     @Override
-    public void render(final Renderer renderer)
+    public void paintComponent(final Graphics g)
     {
         
     }

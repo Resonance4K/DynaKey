@@ -19,21 +19,20 @@ if exist %BIN_DIR% rmdir /s /q %BIN_DIR%
 
 echo\
 echo Compiling program...
+echo\
 
 if not exist %BIN_DIR% mkdir %BIN_DIR%
 
 javac -d %BIN_DIR% -sourcepath %SRC_DIR%^
 	%SRC_DIR%/DynaKey/Application/*.java^
+	%SRC_DIR%/DynaKey/Container/*.java^
 	%SRC_DIR%/DynaKey/Interface/*.java^
 	%SRC_DIR%/DynaKey/Key/*.java^
 	%SRC_DIR%/DynaKey/Main/*.java^
 	%SRC_DIR%/DynaKey/Render/*.java^
 	%SRC_DIR%/DynaKey/Shape/*.java^
+	%SRC_DIR%/DynaKey/Text/*.java^
 	%SRC_DIR%/DynaKey/Window/*.java
-
-echo\
-echo\
-echo\
 
 echo Program compilation process completed!
 

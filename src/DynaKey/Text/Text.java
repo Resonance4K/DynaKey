@@ -1,5 +1,5 @@
 
-package DynaKey.Interface;
+package DynaKey.Text;
 
 public final class Text
 {

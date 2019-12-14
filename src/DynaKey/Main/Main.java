@@ -8,7 +8,7 @@ public final class Main
         
     }
     
-    public Main()
+    private Main()
     {
         
     }

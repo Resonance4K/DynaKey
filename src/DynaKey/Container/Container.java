@@ -1,5 +1,5 @@
 
-package DynaKey.Interface;
+package DynaKey.Container;
 
 import DynaKey.Render.Renderer;
 
@@ -7,9 +7,9 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseWheelEvent;
 
-public abstract class Component
+public abstract class Container
 {
-    protected Component()
+    protected Container()
     {
         
     }
