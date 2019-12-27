@@ -28,17 +28,57 @@ public final class DynaKey
         
     }
     
-    public void handleKeyInput(final KeyEvent e)
+    public void keyTyped(final KeyEvent e)
     {
         
     }
     
-    public void handleMouseInput(final MouseEvent e)
+    public void keyPressed(final KeyEvent e)
     {
         
     }
     
-    public void handleMouseWheelInput(final MouseWheelEvent e)
+    public void keyReleased(final KeyEvent e)
+    {
+        
+    }
+    
+    public void mouseClicked(final MouseEvent e)
+    {
+        
+    }
+    
+    public void mousePressed(final MouseEvent e)
+    {
+        
+    }
+    
+    public void mouseReleased(final MouseEvent e)
+    {
+        
+    }
+    
+    public void mouseEntered(final MouseEvent e)
+    {
+        
+    }
+    
+    public void mouseExited(final MouseEvent e)
+    {
+        
+    }
+    
+    public void mouseDragged(final MouseEvent e)
+    {
+        
+    }
+    
+    public void mouseMoved(final MouseEvent e)
+    {
+        
+    }
+    
+    public void mouseWheelMoved(final MouseWheelEvent e)
     {
         
     }
