@@ -5,78 +5,86 @@ import java.awt.Color;
 
 public final class Square
 {
+    private final Rectangle rectangle;
+    
     public Square()
     {
-        
+        rectangle = new Rectangle();
     }
     
     public void setLocation(final int x, final int y)
     {
-        
+        rectangle.setLocation(x, y);
     }
     
     public void setSize(final int size)
     {
-        
+        rectangle.setSize(size, size);
     }
     
     public void setOutlineThickness(final int thickness)
     {
-        
+        rectangle.setOutlineThickness(thickness);
     }
     
     public void setFillColor(final int r, final int g, final int b, final int a)
     {
-        
+        rectangle.setFillColor(r, g, b, a);
     }
     
     public void setFillColor(final Color color)
     {
-        
+        rectangle.setFillColor(color);
     }
     
     public void setOutlineColor(final int r, final int g, final int b, final int a)
     {
-        
+        rectangle.setOutlineColor(r, g, b, a);
     }
     
     public void setOutlineColor(final Color color)
     {
-        
+        rectangle.setOutlineColor(color);
+    }
+    
+    // Returns the rectangle representation of this square
+    public Rectangle getRectangle()
+    {
+        return rectangle;
     }
     
     public int getX()
     {
-        return 0;
+        return rectangle.getX();
     }
     
     public int getY()
     {
-        return 0;
+        return rectangle.getY();
     }
     
     public int getWidth()
     {
-        return 0;
+        return rectangle.getWidth();
     }
     
     public int getHeight()
     {
-        return 0;
+        return rectangle.getHeight();
     }
     
     public int getOutlineThickness()
     {
-        return 0;
+        return rectangle.getOutlineThickness();
     }
     
     public Color getFillColor()
     {
-        return null;
+        return rectangle.getFillColor();
     }
     
     public Color getOutlineColor()
     {
-        return null;
+        return rectangle.getOutlineColor();
     }
 }
