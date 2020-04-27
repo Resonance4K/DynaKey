@@ -1,18 +1,16 @@
 
 @echo off
 
-echo\
-
-echo Running the cmp.cmd file for DynaKey compilation.
-echo Created by Resonance4K.
-
-echo\
-echo --------------------------------------------------
-echo\
-
 set SRC_DIR=src
 set RES_DIR=resources
 set BIN_DIR=bin
+
+echo\
+echo Running the cmp.cmd file for DynaKey compilation.
+echo Created by Resonance4K.
+echo\
+echo --------------------------------------------------
+echo\
 
 echo Clearing all previously compiled files...
 echo Clearing all copied resource files...
@@ -41,10 +39,8 @@ xcopy %RES_DIR% %BIN_DIR% /s/e/y/i/q | find /v "File(s) copied"
 
 echo\
 echo Program compilation process completed!
-
 echo\
 echo --------------------------------------------------
 echo\
-
 pause > nul | set /p = Press any key to exit...
 exit
