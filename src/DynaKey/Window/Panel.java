@@ -26,6 +26,7 @@ public final class Panel extends JPanel implements KeyListener, MouseListener, M
         
         initKeyboardInput();
         initMouseInput();
+        initInputFocus();
         
         application = new DynaKey();
     }
@@ -42,9 +43,17 @@ public final class Panel extends JPanel implements KeyListener, MouseListener, M
         addMouseWheelListener(this);
     }
     
+    private void initInputFocus()
+    {
+        setFocusable(true);
+        requestFocusInWindow();
+    }
+    
     @Override
     public void paintComponent(final Graphics g)
     {
+        super.paintComponent(g);
+        
         final Graphics2D g2d = (Graphics2D) g;
         
         application.setRendererGraphicsContext(g2d);
