@@ -1,6 +1,8 @@
 
 package DynaKey.Application;
 
+import DynaKey.Render.Renderer;
+
 import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
@@ -8,9 +10,11 @@ import java.awt.event.MouseWheelEvent;
 
 public final class DynaKey
 {
+    private final Renderer renderer;
+    
     public DynaKey()
     {
-        
+        renderer = new Renderer();
     }
     
     private void initContainers()
@@ -20,7 +24,7 @@ public final class DynaKey
     
     public void setRendererGraphicsContext(final Graphics2D g2d)
     {
-        
+        renderer.setGraphicsContext(g2d);
     }
     
     public void render()
