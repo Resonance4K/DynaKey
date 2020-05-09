@@ -1,5 +1,5 @@
 
-package DynaKey.Container;
+package DynaKey.Interface;
 
 import DynaKey.Render.Renderer;
 
@@ -7,9 +7,9 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseWheelEvent;
 
-public final class DividerContainer extends Container
+public final class Button extends Component
 {
-    public DividerContainer()
+    public Button()
     {
         
     }

@@ -24,22 +24,22 @@ public final class Text
     }
     
     private String text;
-    private Character[] characters;
     private HorizontalAlignment alignmentX;
     private VerticalAlignment alignmentY;
     private int x;
     private int y;
+    private int fontStyle;
     private int fontSize;
     private Color fillColor;
     
     public Text()
     {
         text = "";
-        characters = new Character[0];
         alignmentX = HorizontalAlignment.LEFT;
         alignmentY = VerticalAlignment.TOP;
         x = 0;
         y = 0;
+        fontStyle = Font.PLAIN;
         fontSize = DEFAULT_FONT_SIZE;
         fillColor = null;
     }
@@ -47,18 +47,6 @@ public final class Text
     public void setText(final String text)
     {
         this.text = (text == null ? "" : text);
-    }
-    
-    public void setChars(String text)
-    {
-        text = (text == null ? "" : text);
-        
-        characters = new Character[text.length()];
-        
-        for (int i = 0; i < characters.length; i++)
-        {
-            characters[i] = new Character(text.charAt(i));
-        }
     }
     
     public void setHorizontalAlignment(final HorizontalAlignment alignmentX)
@@ -75,6 +63,16 @@ public final class Text
     {
         this.x = x;
         this.y = y;
+    }
+    
+    public void setFontStyleToPlain()
+    {
+        fontStyle = Font.PLAIN;
+    }
+    
+    public void setFontStyleToBold()
+    {
+        fontStyle = Font.BOLD;
     }
     
     public void setFontSize(final int fontSize)
@@ -97,54 +95,9 @@ public final class Text
         fillColor = color;
     }
     
-    // Must set the characters array and both horizontal and vertical alignments before calling this method
-    public void setCharacterBounds(int width, int height)
-    {
-        width = (width < 0 ? 0 : width);
-        height = (height < 0 ? 0 : height);
-        
-        final int alignedX = getAlignedX(width);
-        final int alignedY = getAlignedY(height);
-        
-        for (int i = 0; i < characters.length; i++)
-        {
-            characters[i].getBounds().setLocation(alignedX + (width * i), alignedY);
-            characters[i].getBounds().setSize(width, height);
-        }
-    }
-    
-    private int getAlignedX(final int width)
-    {
-        final int maxWidth = width * characters.length;
-        
-        switch (alignmentX)
-        {
-            case LEFT:      return x;
-            case CENTER:    return x - (maxWidth / 2);
-            case RIGHT:     return x - maxWidth;
-            default:        return 0;
-        }
-    }
-    
-    private int getAlignedY(final int height)
-    {
-        switch (alignmentY)
-        {
-            case TOP:       return y;
-            case CENTER:    return y - (height / 2);
-            case BOTTOM:    return y - height;
-            default:        return 0;
-        }
-    }
-    
     public String getText()
     {
         return text;
-    }
-    
-    public Character[] getChars()
-    {
-        return characters;
     }
     
     public HorizontalAlignment getHorizontalAlignment()
@@ -174,6 +127,6 @@ public final class Text
     
     public Font getFont()
     {
-        return new Font("Dialog", Font.PLAIN, fontSize);
+        return new Font("Dialog", fontStyle, fontSize);
     }
 }
