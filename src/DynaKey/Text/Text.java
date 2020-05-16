@@ -23,6 +23,13 @@ public final class Text
         BOTTOM
     }
     
+    public enum FontStyle
+    {
+        PLAIN,
+        BOLD,
+        ITALIC
+    }
+    
     private String text;
     private HorizontalAlignment alignmentX;
     private VerticalAlignment alignmentY;
@@ -65,14 +72,22 @@ public final class Text
         this.y = y;
     }
     
-    public void setFontStyleToPlain()
+    public void setFontStyle(final FontStyle fontStyle)
     {
-        fontStyle = Font.PLAIN;
-    }
-    
-    public void setFontStyleToBold()
-    {
-        fontStyle = Font.BOLD;
+        if (fontStyle == null) { return; }
+        
+        switch (fontStyle)
+        {
+            case PLAIN:
+                this.fontStyle = Font.PLAIN;
+                break;
+            case BOLD:
+                this.fontStyle = Font.BOLD;
+                break;
+            case ITALIC:
+                this.fontStyle = Font.ITALIC;
+                break;
+        }
     }
     
     public void setFontSize(final int fontSize)
